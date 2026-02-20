@@ -35,7 +35,7 @@ class PostCard extends StatelessWidget {
                     vertical: 4,
                   ),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF89B4FA)..withValues(alpha: 0.15),
+                    color: const Color(0x2689B4FA),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Text(

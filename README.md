@@ -38,8 +38,7 @@ go_router with nested routes. All route paths are centralized in `RouteConstants
 | Package | Version | Purpose |
 |---|---|---|
 | `flutter_riverpod` | ^3.2.1 | State management |
-| `dio` | ^5.9.0 | HTTP client |<img width="1080" height="2340" alt="Screenshot_20260220_133017" src="https://github.com/user-attachments/assets/12d7b3ce-f8ae-450f-8a06-336d1567550b" />
-
+| `dio` | ^5.9.0 | HTTP client |
 | `go_router` | ^16.2.0 | Navigation |
 
 ## Running the app

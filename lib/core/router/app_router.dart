@@ -1,25 +1,21 @@
 import 'package:go_router/go_router.dart';
+import 'package:social_app/core/router/route_constants.dart';
 import '../../features/posts/domain/entities/posts_entity.dart';
 import '../../features/posts/presentation/screens/details_screen.dart';
 import '../../features/posts/presentation/screens/home_screen.dart';
 import '../../features/splash/splash_screen.dart';
 
-const SPLASH_PATH = '/';
-const HOME_PATH = '/home';
-const POST_DETAILS_PATH = 'post/:id';
-const POST_DETAILS_FULL_PATH = '/home/post/:id';
-
 final appRouter = GoRouter(
-  initialLocation: SPLASH_PATH,
+  initialLocation: RouteConstants.splash,
   debugLogDiagnostics: true,
   routes: [
-    GoRoute(path: SPLASH_PATH, builder: (context, state) => const SplashScreen()),
+    GoRoute(path: RouteConstants.splash, builder: (context, state) => const SplashScreen()),
     GoRoute(
-      path: HOME_PATH,
+      path: RouteConstants.home,
       builder: (context, state) => const HomeScreen(),
       routes: [
         GoRoute(
-          path: POST_DETAILS_PATH,
+          path: RouteConstants.postDetail,
           builder: (context, state) {
             final post = state.extra as PostEntity;
             return DetailScreen(post: post);

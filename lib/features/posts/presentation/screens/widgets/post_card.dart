@@ -1,9 +1,7 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:social_app/core/router/app_router.dart';
-
+import '../../../../../core/router/route_constants.dart';
 import '../../../domain/entities/posts_entity.dart';
 
 class PostCard extends StatelessWidget {
@@ -14,8 +12,8 @@ class PostCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => context.go('$HOME_PATH/post/${post.id}', extra: post),
-      child: Container(
+      onTap: () => context.go('${RouteConstants.home}/post/${post.id}', extra: post),
+        child: Container(
         margin: const EdgeInsets.only(bottom: 12),
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
@@ -37,7 +35,7 @@ class PostCard extends StatelessWidget {
                     vertical: 4,
                   ),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF89B4FA).withOpacity(0.15),
+                    color: const Color(0xFF89B4FA)..withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Text(

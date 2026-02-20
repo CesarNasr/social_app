@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:social_app/core/router/app_router.dart';
+import 'package:social_app/core/router/route_constants.dart';
 import '../../domain/entities/posts_entity.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -20,7 +20,7 @@ class DetailScreen extends StatelessWidget {
             Icons.arrow_back_ios_rounded,
             color: Color(0xFF89B4FA),
           ),
-          onPressed: () => context.go(HOME_PATH),
+            onPressed: () => context.go(RouteConstants.home)
         ),
         title: const Text(
           'Post Detail',
@@ -64,9 +64,9 @@ class DetailScreen extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.15),
+        color: color..withValues(alpha: 0.15),
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color..withValues(alpha: 0.3)),
       ),
       child: Text(
         label,

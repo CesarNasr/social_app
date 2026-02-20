@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/router/route_constants.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -40,7 +42,8 @@ class _SplashScreenState extends State<SplashScreen>
 
   void _navigateToHome() {
     Future.delayed(const Duration(seconds: 2), () {
-      if (mounted) context.go('/home');
+      if (mounted) context.go(RouteConstants.home);
+
     });
   }
 
@@ -70,7 +73,7 @@ class _SplashScreenState extends State<SplashScreen>
                     borderRadius: BorderRadius.circular(24),
                     boxShadow: [
                       BoxShadow(
-                        color: const Color(0xFF89B4FA).withOpacity(0.4),
+                        color: const Color(0xFF89B4FA).withValues(alpha: 0.4),
                         blurRadius: 30,
                         spreadRadius: 5,
                       ),
